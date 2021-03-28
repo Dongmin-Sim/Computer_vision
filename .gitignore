@@ -185,4 +185,8 @@ dmypy.json
 # data
 data/
 /data
+
+#PASCAL_VOC
+/PASCAL_VOC
+PASCAL_VOC/
 # End of https://www.toptal.com/developers/gitignore/api/macos,jupyternotebooks,python
