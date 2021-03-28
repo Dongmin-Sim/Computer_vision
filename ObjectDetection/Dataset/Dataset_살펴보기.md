@@ -10,7 +10,7 @@
 
 
 
-## PASCAL VOC
+## 1. PASCAL VOC
 
 PASCAL VOC challenge 는 컴퓨터 비전에서 object recognition 관련된 task를 다루는 대회임. 총 20개 카테고리를 가지고 있고, 영상에서 특정 object 를 검출해내는 성능을 겨루는 대회임. 많은 유명한 object detection 기술들이 이 대회를 통해 발표가 되기도 했으며 논문에서도 주로 쓰이는 데이터 세트임. segmentation 대회도 같이 진행했었음. 
 
@@ -25,9 +25,9 @@ PASCAL VOC challenge 는 컴퓨터 비전에서 object recognition 관련된 tas
 
 
 
-### PASCAL VOC 살펴보기
+### 1.1 PASCAL VOC 살펴보기
 
-#### 데이터세트 파일 구조
+#### 1.1.1 데이터세트 파일 구조
 
 ![image-20210328201541937](/Users/coding_min/Library/Application Support/typora-user-images/image-20210328201541937.png)
 
@@ -39,7 +39,7 @@ PASCAL VOC challenge 는 컴퓨터 비전에서 object recognition 관련된 tas
 
 
 
-#### JPEGImages (original image)
+#### 1.1.2 JPEGImages (original image)
 
 `2007_000033` 의 원본 이미지
 
@@ -61,7 +61,7 @@ plt.show()
 
 
 
-#### Annotation
+#### 1.1.3 Annotation
 
 `2007_000033` 의 xml 파일
 
@@ -73,7 +73,7 @@ plt.show()
 
 
 
-#### SegmentationObject (masking image)
+#### 1.1.4 SegmentationObject (masking image)
 
 `2007_000033` 의 masking image
 
@@ -91,7 +91,7 @@ plt.show()
 
 
 
-#### Annotation 을 이용하여 object 의 정보 parsing 
+#### 1.1.5 Annotation 을 이용하여 object 의 정보 parsing 
 
 xml 파싱을 위한 파일불러오기 및 루트노드 확인. 링크 주소 참고
 ```python
@@ -162,7 +162,7 @@ img_height : 366
 
 
 
-#### Annotation xml 을 통해 bounding box 시각화
+#### 1.1.6 Annotation xml 을 통해 bounding box 시각화
 
 ```python
 import cv2
@@ -212,7 +212,7 @@ plt.show()
 
 
 
-## MS COCO
+## 2. MS COCO
 
 MS COCO 는 PASCAL VOC 데이터 세트 이후에 나오게 되었으며 object detection, segmentation 에 있어서 실제에 가까운 데이터가 필요하게 됨으로써 이를 잘 대변해주는 데이터 세트라고 할 수 있음. 한 영상에 여러개의 클래스들이 있고, contest 의 경우 PASCAL VOC 에 비해 엄격한 기준을 적용. 많은 딥러닝 패키지들이 MS COCO 로 pre_trained 되어 배포되기도 함. 
 
@@ -228,7 +228,7 @@ MS COCO 는 PASCAL VOC 데이터 세트 이후에 나오게 되었으며 object 
 
 
 
-## Google Open Images
+## 3. Google Open Images
 
 구글에서 2018년도에 내놓은 object classificaion, detection, segmentation .. 등을 위한 이미지 데이터 세트. 현재(2021. 3기준)는 version 6 까지 나왔으며 새로운 시각적인 관계(손을 잡고 있는 사람들), 행동주석(달리기, 점프), 등등 다양한 주석을 제공하고 있음. 
 
@@ -260,7 +260,7 @@ open images 데이터 세트에 대한 더 자세한 사항은 [Google open imag
 
 
 
-## PETS
+## 4. PETS
 
 **Performance Evaluation of Tracking and Surveillance**
 
