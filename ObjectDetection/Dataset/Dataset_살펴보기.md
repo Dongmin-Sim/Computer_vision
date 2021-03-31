@@ -29,7 +29,7 @@ PASCAL VOC challenge 는 컴퓨터 비전에서 object recognition 관련된 tas
 
 #### 1.1.1 데이터세트 파일 구조
 
-![image-20210328201541937](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Dataset/image-20210328201541937.png)
+![image-20210328201541937](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Dataset_%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0/image-20210328201541937.png?raw=true)
 
 * `Annotations` : 원본 이미지에 대응되는 xml 파일들이 위치하고 있음. Image 에 대한 annotation 정보가 `xml`에 담겨 있음
 * `JPEGImages` : 원본 이미지가 위치하고 있음
@@ -57,7 +57,7 @@ plt.imshow(img_rgb)
 plt.show()
 ```
 
-![image-20210328202907978](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Dataset/image-20210328202907978.png)
+![image-20210328202907978](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Dataset_%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0/image-20210328202907978.png?raw=true)
 
 
 
@@ -69,7 +69,7 @@ plt.show()
 !cat VOCdevkit/VOC2012/Annotations/2007_000033.xml
 ```
 
-![image-20210328202840638](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Dataset/image-20210328202840638.png)
+![image-20210328202840638](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Dataset_%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0/image-20210328202840638.png?raw=true)
 
 
 
@@ -87,7 +87,7 @@ plt.imshow(img_rgb)
 plt.show()
 ```
 
-![image-20210328203624579](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Dataset/image-20210328203624579.png)
+![image-20210328203624579](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Dataset_%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0/image-20210328203624579.png?raw=true)
 
 
 
@@ -208,7 +208,7 @@ plt.imshow(img_bnd)
 plt.show()
 ```
 
-![image-20210328220956036](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Dataset/image-20210328220956036.png)
+![image-20210328220956036](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Dataset_%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0/image-20210328220956036.png?raw=true)
 
 ## 2. MS COCO
 
