@@ -182,10 +182,6 @@ dmypy.json
 # profiling data
 .prof
 
-# data
-data/
-/data
-
 #PASCAL_VOC
 /PASCAL_VOC
 PASCAL_VOC/
