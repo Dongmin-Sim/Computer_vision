@@ -63,7 +63,7 @@ plt.figure(figsize=(10, 10))
 plt.imshow(rgb_img)
 ```
 
-![cvtColor](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/OpenCV_개요_및_실습/cvtColor.png)
+![cvtColor](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/OpenCV_%EA%B0%9C%EC%9A%94_%EB%B0%8F_%EC%8B%A4%EC%8A%B5/cvtColor.png?raw=true)
 
 ### imwrite()
 
