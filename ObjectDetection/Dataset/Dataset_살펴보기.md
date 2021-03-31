@@ -11,6 +11,7 @@
 
 
 ## 1. PASCAL VOC
+[소스코드 확인](https://github.com/Dongmin-Sim/Computer_vision/blob/main/ObjectDetection/Dataset/PascalVOC_dataset.ipynb)
 
 PASCAL VOC challenge 는 컴퓨터 비전에서 object recognition 관련된 task를 다루는 대회임. 총 20개 카테고리를 가지고 있고, 영상에서 특정 object 를 검출해내는 성능을 겨루는 대회임. 많은 유명한 object detection 기술들이 이 대회를 통해 발표가 되기도 했으며 논문에서도 주로 쓰이는 데이터 세트임. segmentation 대회도 같이 진행했었음. 
 
