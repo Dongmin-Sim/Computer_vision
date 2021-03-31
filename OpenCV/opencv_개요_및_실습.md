@@ -46,7 +46,7 @@ plt.figure(figsize=(10, 10))
 plt.imshow(img)
 ```
 
-![imread](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/OpenCV_개요_및_실습/imread.png)
+![imread](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/OpenCV_%EA%B0%9C%EC%9A%94_%EB%B0%8F_%EC%8B%A4%EC%8A%B5/imread.png?raw=true)
 
 ### cvtColor()
 
