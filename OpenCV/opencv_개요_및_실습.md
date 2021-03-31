@@ -46,7 +46,7 @@ plt.figure(figsize=(10, 10))
 plt.imshow(img)
 ```
 
-![img.001](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/img.001.png)
+![imread](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/OpenCV_개요_및_실습/imread.png)
 
 ### cvtColor()
 
@@ -63,7 +63,7 @@ plt.figure(figsize=(10, 10))
 plt.imshow(rgb_img)
 ```
 
-![img.002](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/img.002.png)
+![cvtColor](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/OpenCV_개요_및_실습/cvtColor.png)
 
 ### imwrite()
 
