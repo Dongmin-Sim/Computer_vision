@@ -199,11 +199,11 @@ video_writer = cv2.VideoWriter(video_path, codec, video_fps, (video_width, video
 frame 개수 : 125, FPS : 25.0, Frame 크기 : (1280, 720)
 ```
 
-![image-20210401193220894](/Users/coding_min/Library/Application Support/typora-user-images/image-20210401193220894.png)
+![videoCapture](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/OpenCV_개요_및_실습/videoCapture.png)
 
 
 
 위의 영상을`VideoCapture` 객체의 `read()` 함수를 통해 Frame 마다 읽어와 rectangle 및 Frame 번호를 Text를 그리고 다시 `VideoWriter` 을 통해 영상을 저장한 결과물이 아래와 같음.
 
-![image-20210401193313749](/Users/coding_min/Library/Application Support/typora-user-images/image-20210401193313749.png)
+![videoWriter](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/OpenCV_개요_및_실습/videoWriter.png)
 
