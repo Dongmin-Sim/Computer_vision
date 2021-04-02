@@ -15,9 +15,7 @@ Objects의 위치를 찾아낸다는 기준으로 위의 task 들을 나누자�
 
 Localization/Detection 문제는 다시 두 가지의 문제로 볼 수 있는데, 하나는 수많은 features 들을 통해 **bounding** **box** **regression** 하는 문제와 이를 통해 예측된 box 값의 좌표에 해당하는 object 를 **Classification** 하는 문제가 합쳐져 있음. 
 
-
-
-![image-20210402152941593](/Users/coding_min/Library/Application Support/typora-user-images/image-20210402152941593.png)
+![Object_Detection_milestone](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Object_Detection_milestone.png)
 
 [이미지 출처 : Object Detection in 20 Years: A Survey](https://arxiv.org/pdf/1905.05055.pdf)
 
@@ -133,11 +131,11 @@ Object는 작고 배경이 큰 경우 detection의 낭비가 발생되는 경우
 
 
 
-[Selective Search 구현 및 시각화]()
+[Selective Search 구현 및 시각화](https://github.com/Dongmin-Sim/Computer_vision/blob/main/ObjectDetection/Selective_Search.ipynb)
 
 *Selective Search* 모듈을 이용하여 *Selective Search* 를 실제 이미지에 적용해보고 bounding box 를 시각화 해봅니다. 
 
-
+![region_proposal](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/region_proposal.png)
 
 
 
