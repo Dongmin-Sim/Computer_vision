@@ -15,7 +15,7 @@ Objects의 위치를 찾아낸다는 기준으로 위의 task 들을 나누자�
 
 Localization/Detection 문제는 다시 두 가지의 문제로 볼 수 있는데, 하나는 수많은 features 들을 통해 **bounding** **box** **regression** 하는 문제와 이를 통해 예측된 box 값의 좌표에 해당하는 object 를 **Classification** 하는 문제가 합쳐져 있음. 
 
-![Object_Detection_milestone](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Object_Detection_milestone.png)
+![Object_Detection_milestone](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Object_Detection_milestone.png)
 
 [이미지 출처 : Object Detection in 20 Years: A Survey](https://arxiv.org/pdf/1905.05055.pdf)
 
@@ -29,7 +29,7 @@ Localization/Detection 문제는 다시 두 가지의 문제로 볼 수 있는�
 
 *One-Stage Detector* 과  *Two-Stage Detector* 의 차이점은 간단하게 구분하자면 **Two-Stage Detector**는 Region proposal 의 프로세스와 Classifciation + bounding box regressing 하는 프로세스로 나뉘어 순차적으로 진행되는 방법임. 
 
-![Two-stage Detector](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Two-stage Detector.png)
+![Two-stage Detector](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Two-stage%20Detector.png)
 
 먼저 *Selective Search* 나 *Region Proposal Network* (딥러닝 기반 영역제안 네트워크) 를 통해 영역을 제안한 후 후보영역군에 대한 *Classification* + Regression 을 통해 *Object Detection* 을 하는 방식으로 이루어집니다. 이러한 *Two-Stage Detector* 높은 정확도를 제공하지만 *One-stage Detector* 보다는 비교적 처리속도가 느리다는 단점이 있습니다.
 
@@ -41,7 +41,7 @@ Localization/Detection 문제는 다시 두 가지의 문제로 볼 수 있는�
 
 앞선  *Two-Stage Detector* 의 처리속도가 비교적 느리다는 단점과 더불어 실시간으로 Object Detection 을 해야하는 요구 증가와 시대적 변화를 충족시키기엔 RCNN 은 어렵다는 분위기가 자리잡게 되면서 이러한 문제를 해결하기 위한 *one-stage detector* 방법론이 대두되게 됨.
 
-![One-stage Detector](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/One-stage Detector.png)
+![One-stage Detector](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/One-stage%20Detector.png)
 
   **One-Stage Detector** 은 대표적인 YOLO 알고리즘의 이름을 보면 직관적으로 이해 되는데 You Only Look Once(한번만 보면 돼!) 라는 이름처럼 Two-Stage 에서 하던 프로세스를 한번에 수행하게 되므로써 수행속도가 빠르다는 장점 때문에 실시간 탐지를 요구하는 어플리케이션에 주로 활용되곤 함.
 
@@ -89,7 +89,7 @@ Localization/Detection 문제는 다시 두 가지의 문제로 볼 수 있는�
 
 ## Sliding window 방식
 
-![Sliding Window](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/Sliding Window.png)
+![Sliding Window](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Sliding%20Window.png)
 
 object detection의 초기 기법으로 활용됨. window를 왼쪽 상단에서 오른쪽 하단으로 이동시키며 detection 하는 방식임.
 
@@ -135,7 +135,7 @@ Object는 작고 배경이 큰 경우 detection의 낭비가 발생되는 경우
 
 *Selective Search* 모듈을 이용하여 *Selective Search* 를 실제 이미지에 적용해보고 bounding box 를 시각화 해봅니다. 
 
-![region_proposal](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/region_proposal.png)
+![region_proposal](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/region_proposal.png)
 
 
 
