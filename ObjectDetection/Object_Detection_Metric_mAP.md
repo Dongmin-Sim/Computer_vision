@@ -2,7 +2,7 @@
 
 실제 object가 Detected 된 재현율(Recall) 의 변화에 따른 정밀도(Precision)의 값을 평균한 성능 수치
 
-![mAP](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/95c553ad-f4a9-48d3-aa68-af21e6f13422/Untitled.png)
+![mAP](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Metric_mAP/mAP)
 
 [참고 : 분류성능평가지표 - Precision(정밀도), Recall(재현율) and Accuracy(정확도)](https://sumniya.tistory.com/26)
 
@@ -29,7 +29,7 @@ Object Detection 에서 개별 Object에 대한 검출()예측이 성공하였�
 
 ### 오차행렬(confusion matrix)
 
-![ConfusionMatrix](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d5f798e-d289-4997-b0b1-dac9d1b57381/Untitled.png)
+![ConfusionMatrix](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Metric_mAP/ConfusionMatrix.png)
 
 Confusion matrix
 
@@ -39,13 +39,13 @@ Confusion matrix
 
 - **TP**
 
-![TP](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/460a81c7-04d8-4110-a3ed-68fcb1b3fa13/_2021-03-26__7.39.56.png)
+![TP](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Metric_mAP/FP.png)
 
 예측한 값이 실제값과 정확히 일치한 경우를 뜻합니다. 정밀도와 재현율의 분자와 분모의 값으로 들어가게되며 TP 의 반대인 TN 은 사용되지 않습니다. 왜냐하면 일반적으로 Positive 에 대한 정보를 알고 싶은 task들이 많기 때문에 예측한 값이 실제값과 모두 일치하지 않는 경우인 TN 은 지표에서 사용되지 않습니다.
 
 ------
 
-![FP](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87a0962a-9323-4da2-89b9-71da9712dfa1/_2021-03-26__7.40.06.png)
+![FP](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Metric_mAP/FP.png)
 
 - **정밀도**
 
@@ -57,7 +57,7 @@ $$Precision = \frac{TP}{(FP+TP)}$$
 
 ------
 
-![FN](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a7f23b1-3706-495d-9ce9-9b5a2053a90e/_2021-03-26__7.40.11.png)
+![FN](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Metric_mAP/FN.png)
 
 - **재현율**
 
@@ -93,7 +93,7 @@ $$
 
 후보 임계값이라고 볼 수 있는 Confidence Threshold 이 낮아지면 그만큼 Bounding box 후보군이 많아지게 되므로 재현율의 값은 높아지게 되고, 반대로 Confidence Threshold 이 높아지면 Boundinf box 후보를 예측하는 것이 엄격해지는 것이기 때문에 그만큼 Bounding box 후보군이 적어지게 되고 정밀도의 값은 높아짐
 
-![ConfidenceThreshold](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e1a63e5-d9da-4fa1-a24b-39f927270623/Untitled.png)
+![ConfidenceThreshold](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/Metric_mAP/ConfidenceThreshold.png)
 
 이러한 특징 때문에 정밀도와 재현율은 서로 보완적인 평가 지표가 되게됩니다. 어느 한쪽이 높아지면 다른 한쪽이 낮아지는 관계가 성립이 되는데 이를 정밀도/재현율의 Trade-off 라고 부릅니다.
 
