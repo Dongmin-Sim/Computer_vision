@@ -8,11 +8,11 @@
 
 *RCNN* 의 큰 단계를 나누어보면 다음과 같습니다.
 
-![RCNN_stage1](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/RCNN/RCNN_stage1.png)
+![RCNN_stage1](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/RCNN/RCNN_stage1.png)
 
 *Object* 가 있을만한 2,000개의 영역을 추천하는 *Region Proposal* 단계( *stage1* ) 와
 
-![RCNN_stage2](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/RCNN/RCNN_stage2.png)
+![RCNN_stage2](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/RCNN/RCNN_stage2.png)
 
 *Region Proposal* 된 각각의 *Region* 영역을 *CNN* 에 통과시키고 나온 *Feature map* 을 통해 *classifcation* 하고 *Bounding-Box Regression* 하는 stage 2단계로 나누어 질 수 있습니다.
 
@@ -32,7 +32,7 @@
 
 ## RCNN 요약
 
-![RCNN개요](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/RCNN/RCNN개요.png)
+![RCNN개요](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/RCNN/RCNN%EA%B0%9C%EC%9A%94.png)
 
 1. 이미지가 입력됩니다.
 
@@ -52,7 +52,7 @@
 
 RCNN 은 최초로 인풋 이미지에 대해서 Selective Search 기법([Selective_Search 구현 확인](https://github.com/Dongmin-Sim/Computer_vision/blob/main/ObjectDetection/Selective_Search.ipynb))으로 region proposal 을 수행하게 되는데,  정확한 이미지의 region을 선택하는 것이 아닌 object 가 있을 법한 곳의 region 을 추천해주기 때문에 정확도가 떨어집니다. 그래서 이후에 별도로 box regression 을 다시 수행합니다.
 
-![Bounding_Box_Regression.001](/Users/coding_min/home/Github/DLComputer_Vision/keynote/img/RCNN/Bounding_Box_Regression.001.png)
+![Bounding_Box_Regression.001](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/RCNN/Bounding_Box_Regression.001.png)
 
 Box regression 은 실제 object 가 위치해 있는 Ground Truth와 predict 간의 오차를 줄여가는 업데이트를 통해 Ground Truth 에 box를 맞추는 회귀식을 세우는 것이 목표가 됩니다. 즉 다시말해 Ground Truth를 찾기 위한 선형회귀의 손실함수 output 을 최소화할 수 있는 weight 값을 찾는 것! 이라고 표현할 수 있습니다. 
 
@@ -60,7 +60,7 @@ Box regression 은 실제 object 가 위치해 있는 Ground Truth와 predict �
 
 결과적으로 회귀 목표값들은 그림의 t 값들로 표현이 되고, 이 t값과 d(P) function 을 이용하여 가중치 w 를 학습시킬 손실함수를 정의하고 최적화할 수 있는 방향으로 Bounding Box Regression 을 수행하게 됩니다.
 
-![image-20210406215559510](/Users/coding_min/Library/Application Support/typora-user-images/image-20210406215559510.png)
+![image-20210406215559510](https://github.com/Dongmin-Sim/Computer_vision/blob/main/keynote/img/RCNN/lossfunction.png)
 
 자세한 내용은 논문의 Appendix C -  Bounding-box regression 부분을 참고
 
