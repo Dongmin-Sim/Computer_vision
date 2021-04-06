@@ -70,7 +70,7 @@ Box regression 은 실제 object 가 위치해 있는 Ground Truth와 predict �
 
 VOC 2010 데이터 세트에 대한 성능 결과 기존 타 모델들에 비해 mAP 10% 이상 향상된 결과를 보여줬음
 
-[mAP 란 ?]()
+[mAP 란 ?](https://github.com/Dongmin-Sim/Computer_vision/blob/main/ObjectDetection/Object_Detection_Metric_mAP.md)
 
 ![image-20210405190553963](/Users/coding_min/Library/Application Support/typora-user-images/image-20210405190553963.png)
 
