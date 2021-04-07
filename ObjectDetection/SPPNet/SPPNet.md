@@ -47,11 +47,35 @@ RCNN 의 주요한 문제점은 다음과 같았습니다.
 
 그래서 CNN 을 통과한 각기 다른 사이즈를 가진 RegionProposal 이미지가 반영된 피쳐맵들을 FC layer 를 통과하기 이전에 SPPNet 가 적용되는 방식으로 위의 문제점을 해결하고자 하는 시도가 SPPNet 의 핵심이라고 볼 수 있습니다.
 
-### SPPNet의 작동방식 (Spatial Pyramid Matching)
+### SPPNet의 작동방식 (Spatial Pyramid Matching 기법)
 
 Spatial Pyramid Pooling 은 Bag of Visual word 라는 고전적인 컴퓨터 비전영역의 기법의 문제점을 해결하기 위해 나왔습니다. 자연어를 처리분야에 주로 사용되는 기법으로 각 단어들에 대해 벡터화를 시키는 텍스트 기법을 유사하게 이미지 분야에 적용시킨 것인 Bag of visual words 기법입니다.
 
-그러나 Bag of visual words 는 이미지의 위치적인 특성을 반영하지 않는다는 문제점을 갖습니다. 그렇기 때문에 이미지 별로 각각의 분면을 나눈 뒤 분면상의 이미지의 특징 갑들을 벡터화 시키는 것이 SPM 입니다. 
+그러나 Bag of visual words 는 이미지의 위치적인 특성을 반영하지 않는다는 문제점을 갖습니다. 그렇기 때문에 이미지 별로 각각의 분면을 나눈 뒤 분면상의 이미지의 특징 값들을 벡터화 시키는 시도가 있었는데 바로 SPM기법 입니다.
+
+전체 이미지 영역에서 각 개별 feature 들의 히스토그램을 추출하고, 4분면의 개별분면에 대한 feature 들의 히스토그램 특성을 추출하고, 16분면으로 나눈 이미지의 각 분면들의 feature 히스토그램을 추출하게 됩니다. 이를 그림으로 표현하면 이해하기 더 쉽습니다. 
+
+
+
+그렇게 나온 각 분면별 feature 히스토그램을 벡터화 시켜서 결합을 시키면 원본이미지의 특징을 잘 나타내는 벡터가 됩니다. (Bag of visual words 보다 효과적으로 이미지 내에서 위치특성을 반영가능)
+
+앞선 분면분할을 통해 feature 히스토그램을 벡터화 시키는 과정을 이용하면 RCNN 에서 직면했던 고정된 vector 크기를 만들어내는 것이 가능해집니다. 왜냐하면 나누어지는 분면의 수에 따라서 vector 값의 크기가 결정되기 때문입니다. 
+$$
+vector size = feature수  * 분면개수
+$$
+예를 들어, 한 이미지내의 feature 가 3개라고 가정을 한다면, 분면을 나누지 않은 상태(Level_0)인 전체 이미지에서 각 feature 들의 히스토그램을 vector 화 시킨다면 vector 의 크기는 3으로 표현될 수 있을 것입니다. 전체 이미지를 4분면으로 분할한 상태(Level_1)에서 각 분면별로 feature 들의 히스토그램을 vector 화 시킨다면, vector 크기는 3 * 4 = 12 로 표현될 수 있습니다. 전체 이미지를 16분면으로 분할한 상태(Level_2) 에서 각 분면별로 feature 들의 히스토그램을 vector 화 시킨다면, vector 크기는 3 * 16 = 48 로 표현될 수 있습니다. 그렇다면 이 전체 이미지는 3 + 12 + 48 = 63개의 원소를 가진 vector 값으로 표현이 가능해집니다. 
+
+이렇게 되면 입력받게 되는 feature map 의 크기가 8 * 8 이던 8 * 16 이던 이미지의 사이즈는 vector 의 크기에 영향을 받지 않게 됩니다. 앞서 RCNN 이 직면했던 고정된 vector 크기문제를 SPP layer를 통해 해결할 수 있는 것 입니다. 
+
+### Spatial Pyramid Pooling layer
+
+Spatial Pyramid Matching 기법으로 Pooling layer 을 적용한 것입니다. SPPNet은 CNN의 마지막 Pooling layer 로 SPP 로 대체하여 Feature map 분할 및 max pooling 을 이용하여 고정된 vector 크기를 만들어 냅니다.
+
+
+
+### SPPNet에서 이미지 classification 
+
+
 
 
 
