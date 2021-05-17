@@ -296,3 +296,7 @@ fabric.properties
 
 # dir
 pretrained/
+data/
+
+# keynote
+*.key
