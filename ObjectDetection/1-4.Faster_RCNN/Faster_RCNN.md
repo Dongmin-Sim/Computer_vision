@@ -11,6 +11,12 @@ RCNN 계열 모델들 중 가장 뛰어난 성능을 가지고 있음. 기존의
 
 
 
+## RPN(Region Proposal Network)
+
+
+
+
+
 ## Anchor Box
 
 기존에 Selective Search 는 이미지에 대해 edge와 color 값의 변화를 추적을 근거로하여 object 를 proposal하는  알고리즘이 있었으나, 
@@ -37,7 +43,7 @@ Ground Truth Bounding Box 의 겹치는 IOU 값에 따라 Positive, Negative Anc
 
 
 
-## RPN(Region Proposal Network)
+## Fine-tuning
 
 
 
